@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+    <persistence-unit name="Staff">
+        <jta-data-source>java:/classicmodels</jta-data-source>
+        <class>com.utar.staff.model.entity.Customer</class>
+        <class>com.utar.staff.model.entity.Office</class>
+        <class>com.utar.staff.model.entity.Order</class>
+        <class>com.utar.staff.model.entity.User</class>
+        <class>com.utar.staff.model.entity.PaymentId</class>
+        <class>com.utar.staff.model.entity.Payment</class>
+        <class>com.utar.staff.model.entity.OrderdetailId</class>
+        <class>com.utar.staff.model.entity.Orderdetail</class>
+        <class>com.utar.staff.model.entity.Productline</class>
+        <class>com.utar.staff.model.entity.UserRoleId</class>
+        <class>com.utar.staff.model.entity.UserRole</class>
+        <class>com.utar.staff.model.entity.Employee</class>
+    </persistence-unit>
+</persistence>
