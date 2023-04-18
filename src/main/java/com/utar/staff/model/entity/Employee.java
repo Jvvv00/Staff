@@ -5,11 +5,11 @@ import javax.persistence.*;
 @Entity
 @Table(name = "employees", schema = "classicmodels")
 @NamedQuery(name = "Employee.findbyId", query = "SELECT e FROM Employee e WHERE e.id = :id")
-@NamedQuery(name = "Employee.findAll", query = "SELECT e FROM Employee e")
+@NamedQuery(name = "Employee.findAll", query = "SELECT e FROM Employee e order by e.id")
 public class Employee {
     @Id
     @Column(name = "employeenumber", nullable = false)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(name = "lastname", nullable = false, length = 9)

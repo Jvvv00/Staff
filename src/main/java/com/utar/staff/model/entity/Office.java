@@ -1,15 +1,15 @@
 package com.utar.staff.model.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "offices", schema = "classicmodels")
+@NamedQuery(name = "Office.findbyId", query = "SELECT o FROM Office o WHERE o.id = :id")
+@NamedQuery(name = "Office.findAll", query = "SELECT o FROM Office o")
 public class Office {
     @Id
     @Column(name = "officecode", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(name = "city", nullable = false, length = 13)

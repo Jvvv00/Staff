@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="css/templatemo-misc.css">
     <link rel="stylesheet" href="css/templatemo-style.css">
 
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
@@ -96,51 +98,26 @@
     </div> <!-- /.main-nav -->
 </header> <!-- /.site-header -->
 
-<!--Staff content-->
-<div class="form-container text-center">
-    <table>
-        <form action="StaffListServlet">
-            <input type="hidden" name="keyword" value=""/>
-            <input type="hidden" name="direction" value="ASC"/>
-            <tr>
-                <td>
-                    <input type="image" name="office" value="office"
-                           src="images/office.jpg" alt="" height="350">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h3>Office</h3>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="image" name="jobTitle" value="jobTitle"
-                           src="images/staff.jpg" alt="" height="350">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h3>Job Title of Employee</h3>
-                </td>
-            </tr>
-        </form>
-        <tr>
-            <td>
-                <a href="staffLogin.html">
-                    <img src="images/management.png" alt="Login" height="350">
-                </a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <h3>Staff Management</h3>
-            </td>
-        </tr>
-    </table>
+<!--Login-->
+<div class="text-center mt-4 mb-4">
+    <h1>Login</h1>
+</div>
+<br>
+<div class="form-container">
+    <form method="post" action="LoginServlet">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+        <!--<input type="submit" value="Login">-->
+        <button class="btn aqua-gradient btn-rounded btn-sm my-0 btn btn-info"
+                type="submit" value="Login">Login</button>
+    </form>
 </div>
 <hr>
-<!-- End of Staff Content-->
+<!--End of Login-->
 
 <div class="content-section">
     <div class="container">
@@ -399,7 +376,6 @@
         });
     });
 </script>
-
 
 </body>
 </html>
